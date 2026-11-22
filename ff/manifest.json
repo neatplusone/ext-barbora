@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "Barbora URL Modifier",
-    "version": "2.0",
-    "description": "Automatically appends 'order=priceAsc' to URLs except the excluded ones.",
+    "version": "2.1",
+    "description": "Automatically appends 'sort=priceAsc' to URLs except the excluded ones.",
     "permissions": [
         "*://*.barbora.lt/*"
     ],

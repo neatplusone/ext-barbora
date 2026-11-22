@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Barbora URL Modifier
 // @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  Automatically add ?order=priceAsc or &order=priceAsc to Barbora.lt URLs if not set, excluding certain paths and subdomains.
+// @version      2.1
+// @description  Automatically add ?sort=priceAsc or &sort=priceAsc to Barbora.lt URLs if not set, excluding certain paths and subdomains.
 // @author       dw5
 // @match        *://*.barbora.lt/*
 // @grant        none
@@ -56,15 +56,15 @@
         } else {
             console.log(`Path not excluded: ${url.pathname}`);
 
-            // Check if the "order" parameter is present
-            if (!url.searchParams.has('order')) {
-                // Add the "order" parameter with the value "priceAsc"
-                url.searchParams.append('order', 'priceAsc');
+            // Check if the "sort" parameter is present
+            if (!url.searchParams.has('sort')) {
+                // Add the "sort" parameter with the value "priceAsc"
+                url.searchParams.append('sort', 'priceAsc');
 
                 // Redirect to the modified URL
                 window.location.href = url.href;
             } else {
-                console.log("Order parameter already present");
+                console.log("Sort parameter already present");
             }
         }
     }
