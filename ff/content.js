@@ -68,5 +68,12 @@
             }
         });
     });
-    observer.observe(document.body, { subtree: true, childList: true });
+    // At document_start, <body> doesn't exist yet, so wait for it before observing
+    if (document.body) {
+        observer.observe(document.body, { subtree: true, childList: true });
+    } else {
+        document.addEventListener('DOMContentLoaded', () => {
+            observer.observe(document.body, { subtree: true, childList: true });
+        });
+    }
 })();

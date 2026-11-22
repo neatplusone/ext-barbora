@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Barbora URL Modifier
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.2
 // @description  Automatically add ?sort=priceAsc or &sort=priceAsc to Barbora.lt URLs if not set, excluding certain paths and subdomains.
 // @author       dw5
 // @match        *://*.barbora.lt/*
 // @grant        none
-// @downloadURL  https://github.com/dw5/ext-barbora/main/user.js
-// @updateURL    https://github.com/dw5/ext-barbora/main/user.js
+// @downloadURL  https://raw.githubusercontent.com/neatplusone/ext-barbora/main/user.js
+// @updateURL    https://raw.githubusercontent.com/neatplusone/ext-barbora/main/user.js
 // ==/UserScript==
 
 /* 2024-07-30b */
